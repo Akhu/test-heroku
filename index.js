@@ -7,12 +7,12 @@ const port = process.env.PORT || 3000;
 
 var users = [];
 
-var exempleUser = {
+var exampleUser = {
   'name' : 'Jane Doe',
   'mail' : 'jane@doe.fr'
 }
 
-var exempleMessage = {
+var exampleMessage = {
   'from' : 'jane@doe.fr',
   'message' : 'Some message'
 }
