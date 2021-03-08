@@ -4,6 +4,19 @@ const http = require('http').Server(app);
 const io = require('socket.io')(http);
 const port = process.env.PORT || 3000;
 
+
+var users = [];
+
+var exempleUser = {
+  'name' : 'Jane Doe',
+  'mail' : 'jane@doe.fr'
+}
+
+var exempleMessage = {
+  'from' : 'jane@doe.fr',
+  'message' : 'Some message'
+}
+
 app.get('/', (req, res) => {
   res.sendFile(__dirname + '/public/index.html');
 });
