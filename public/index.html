@@ -4,6 +4,7 @@
     <title>Socket.IO chat</title>
     <link href="style.css" rel="stylesheet"/>
     <link href="tailwind.css" rel="stylesheet"/>
+    <script src="/jsmd5.js"></script>
   </head>
   <body>
     <div class="container mx-auto">
@@ -16,6 +17,8 @@
 
     <script>
       var socket = io();
+
+      console.log(calcMD5('anthony.dacr@gmail.com'));
 
       var messages = document.getElementById('messages');
       var form = document.getElementById('form');
