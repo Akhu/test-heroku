@@ -23,6 +23,7 @@
       var messages = document.getElementById('messages');
       var form = document.getElementById('form');
       var input = document.getElementById('input');
+      var searchGifButton = document.getElementById('search-gif');
 
       form.addEventListener('submit', function(e) {
         e.preventDefault();
@@ -30,6 +31,12 @@
           socket.emit('chat message', input.value);
           input.value = '';
         }
+      });
+
+      socket.on('gif', function(gifUrl) {
+        var gifImage = document.createElement('img');
+        gifImage.src = gifUrl;
+        messages.appendChild(gifImage);
       });
 
       socket.on('chat message', function(msg) {
